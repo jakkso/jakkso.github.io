@@ -4,6 +4,16 @@
     <title>Start Page</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script>
+    		window.onkeyup = keyup;
+    		var inputTextValue;
+    		function keyup(e) {
+    			inputTextValue = e.target.value;
+    			if (e.keyCode == 13) {
+    				window.location = "http://www.google.com/search?q=" + inputTextValue;
+    			}
+    		}
+    	</script>
   </head>
   <body>
     <nav class="header">
@@ -18,11 +28,10 @@
       <div class="dropdown">
         <button class="dropbtn">Web Dev</button>
         <div class="dropdown-content">
-           <a target="_blank" href="https://www.w3schools.com/css/default.asp">CSS</a>
-           <a target="_blank" href="https://www.w3schools.com/html/default.asp">HTML</a>
+           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn">MDN</a>
            <a target="_blank" href="https://www.codecademy.com/login?redirect=https%3A%2F%2Fwww.codecademy.com%2F">CA</a>
            <a target="_blank" href="https://github.com">Git</a>
-           <a target="_blank" href="https:www.4chan.org/g/wdg">/wdg/</a>
+           <a target="_blank" href="https://www.4chan.org/g/wdg">/wdg/</a>
         </div>
       </div>
       <div class="dropdown">
@@ -41,11 +50,11 @@
            <a target="_blank" href="https://www.reddit.com/r/minecraft">MC</a>
         </div>
       </div>
-      </div>
     </nav>
     <div class=parent>
       <div class="container">
-        <h1 class="banner">Speak The Truth</h1>
+        <p class="banner">Speak The Truth</p>
+        <input id="search_bar", style="search", type="text", spellcheck="false", onKeydown="Javascript: if (event.keyCode == 13) search();", autofocus>
       </div>
     </div>
     <div class="footer">
