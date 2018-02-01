@@ -1,0 +1,8 @@
+# Base Ignored files
+.idea/
+scratch*
+.DS_Store
+__pycache__/
+config.py
+
+# Project Specific Files

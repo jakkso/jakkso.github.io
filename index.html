@@ -1,61 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Start Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <script>
-    		window.onkeyup = keyup;
-    		var inputTextValue;
-    		function keyup(e) {
-    			inputTextValue = e.target.value;
-    			if (e.keyCode == 13) {
-    				window.location = "http://www.google.com/search?q=" + inputTextValue;
-    			}
-    		}
-    	</script>
-  </head>
-  <body>
-    <nav class="header">
-      <div class="dropdown">
-        <button class="dropbtn">Moto</button>
-        <div class="dropdown-content">
-           <a target="_blank" href="https://www.4chan.org/o/dbt">/dbt/</a>
-           <a target="_blank" href="https://www.reddit.com/r/CalamariRaceTeam/">/r/crt/</a>
-           <a target="_blank" href="https://www.reddit.com/r/motorcycles/">/r/moto</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Web Dev</button>
-        <div class="dropdown-content">
-           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn">MDN</a>
-           <a target="_blank" href="https://gitlab.com/users/sign_in">GitLab</a>
-           <a target="_blank" href="https://github.com">GitHub</a>
-           <a target="_blank" href="https://www.4chan.org/g/wdg">/wdg/</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Gaming</button>
-        <div class="dropdown-content">
-           <a target="_blank" href="http://store.steampowered.com">Steam</a>
-           <a target="_blank" href="https://www.reddit.com/r/tf2">TF2</a>
-           <a target="_blank" href="https://www.reddit.com/r/minecraft">MC</a>
-        </div>
-      </div>
-    </nav>
-    <div class=parent>
-      <div class="container">
-        <p class="banner">Speak The Truth</p>
-        <input id="search_bar", style="search", type="text", spellcheck="false", onKeydown="Javascript: if (event.keyCode == 13) search();", autofocus>
-      </div>
-    </div>
-    <div class="footer">
-     <div class="footer-left">
-        <p> add weather thingie here</p>
-      </div>
-      <div class="footer-right">
-        <p>think of something to add here</p>
-      </div>
-    </div>
-  </body>
+<html lang="en">
+<head>
+    <title>Local Weather</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/c5eded3e90.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script src="location.js"></script>
+    <!--
+    -->
+</head>
+<body>
+<div class="loading-icon-container"><img src="https://www.dropbox.com/s/pjv7incx9dh72sn/loading.gif?raw=1" class="loading-icon"></div>
+<header>
+    <div class="title">Weather</div>
+</header>
+<div class="container">
+    <img src="#" class="icon">
+    <span class="city" id="city"></span>
+    <span class="refresh"><a href="#" class="refresh-link"><i class="fa fa-refresh" aria-hidden="true"></i></a></span>
+    <ul class="list">
+        <li class="temp list" id="temp"></li>
+        <li class="humidity list" id="humidity"></li>
+        <li class="wind list" id="wind"></li>
+    </ul>
+    <button class="btn">Convert to °C</button>
+</div>
+</body>
 </html>

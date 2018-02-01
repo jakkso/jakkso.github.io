@@ -1,141 +1,115 @@
-/* * {
-  border: 1px solid white;
+:root {
+  --button-shadow: 10px;
 }
-*/
+
+.icon, .title-text{
+  display: inline;
+  float: left;
+}
 
 body {
-  font-family: 'Roboto Slab', serif;
-  background-color: rgb(0, 77, 77);
+  font-size: 10px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.header{
-  top:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/*Dropdown menu, hidden by default*/
-.dropdown-content {
-  display: none;
-  position: absolute;
-  text-align: center;
-  width: 95px;
-  max-width: 100px;
-  z-index: 1;
-}
-
-/* Dropdown Button */
-.dropbtn {
-  padding: 15px;
-  font-size: 15px;
-  cursor: pointer;
+.loading-icon-container {
+  position:fixed;
+  left: calc(50% - 50px);
+  top: 50%;
+  height: 75px;
   width: 100px;
-  margin:1px;
-  transition: 0.5s ease;
+  background-color: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-/*Common dropdown elements */
-.dropbtn, .dropdown-content{
-  border: 3px solid #ededed;
-  border-radius:10px;
-  background-color: rgb(30,60,60);
-  color: #ededed;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #ededed;
-  padding: 12px 16px;
-  text-decoration: none;
+.loading-icon {
   display: block;
+  margin: 0 auto;
+  padding-top: 5px;
+  width: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-size: 4em;
+  margin: 50px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-background-color: #ededed;
-border-radius: 5px;
-color: black;
-transition: 0.5s ease;
+
+.icon {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  position: relative;
+  left: -1em;
+  bottom: 1.5em;
+  margin:1em;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+
+.list {
+  list-style-type: none;
+  float: left;
+  clear: both;
+  font-size: 1.2em;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #ededed;
+.container {
+  display: none;
+  padding: 1em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #408E2F;
   color: black;
-  transition: 0.5s ease;
+  min-height: 150px;
+  width: 250px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0.2em 0.2em 0.2em black;
+  -moz-box-shadow: 0.2em 0.2em 0.2em black;
+  box-shadow:  0.2em 0.2em 0.2em black;
 }
 
-.header, .footer{
-  position: absolute;
-  height: 8%;
-  background-color: rgb(3,39,39);
-  right:0;
-  left: 0;
-  /*margin:auto;*/
+
+.city {
+  font-size: 2.5em;
 }
 
-.container{
-  height: 84%;
-  position: fixed;
-  color: #ededed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align:center;
-  justify-content: center;
-  top: 8%;
-  bottom:auto;
-  width: 100%;
+.btn {
+  background-color: #9AD58E;
+  color: black;
+  border: none;
+  font-size: 1.2em;
+  box-shadow:  0.2em 0.2em 0.2em grey;
+  -webkit-box-shadow: 0.2em 0.2em 0.2em black;
+  -moz-box-shadow: 0.2em 0.2em 0.2em black;
+  position: relative;
+  bottom: -105px;
+  left: 90px;
 }
 
-.banner{
-  text-transform: uppercase;
-  font-size: 8em;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: -moz-none;
-  -o-user-select: none;
-  user-select: none;
+.btn:active {
+  background-color: #216A12;
+  color: white;
 }
 
-input {
-	text-align: center;
-	color: #ededed;
-	background-color: rgb(0, 77, 77);
-	border: 3px solid #d8d8d8;
-	border-radius: 10px;
-	width: 25%;
-  max-width: 400px;
-	height: 20px;
-	font-size: 14px;
-  font-weight: bold;
-	padding : 5px;
-	position:relative;
+.refresh-link{
+  text-decoration: none;
+  color: black;
 }
 
-.footer{
-  color:white;
-  bottom:0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.fa-refresh {
+  position: relative;
+  left: 7em;
+  bottom: 2em;
+  font-size: 1.5rem;
 }
 
-.footer-left, .footer-right {
-  /*border: 3px solid white; */
-  text-align:center;
-  width: 50%;
-  height: 100%;
+.fa-refresh:active {
+  color: white;
 }
